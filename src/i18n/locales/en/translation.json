@@ -1,0 +1,36 @@
+{
+  "langCode": "en",
+
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "experience": "Experience",
+    "education": "Education",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Hi! I'm Miroszlav Popovics",
+    "subtitle": "Frontend Developer (React)",
+    "cta": "Download CV",
+    "contact": "Contact me"
+  },
+  "about": {
+    "title": "About",
+    "lead": "A brief about my background and goals.",
+    "text": "I focus on HTML5, CSS3, JS, React, Vite, CSS Modules, i18n, Git, Vercel and responsive design. I am studying now Shopify (Liquid)."
+  },
+  "skills": { "title": "Skills", "lead": "Technologies and tools." },
+  "projects": { "title": "Projects", "lead": "Selected recent work." },
+  "experience": { "title": "Experience", "lead": "Companies and roles." },
+  "education": { "title": "Education", "lead": "Universities, courses." },
+  "contact": {
+    "title": "Contact",
+    "lead": "Open to collaboration.",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "send": "Send"
+  }
+}

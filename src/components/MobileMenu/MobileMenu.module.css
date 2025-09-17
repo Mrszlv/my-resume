@@ -1,0 +1,61 @@
+.burger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: var(--card);
+  color: var(--text);
+}
+
+@media (min-width: 960px) {
+  .burger {
+    display: none;
+  }
+}
+
+.backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 60;
+  display: grid;
+}
+
+.sheet {
+  background: var(--bg);
+  border-left: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 16px;
+  width: min(86vw, 360px);
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sheetHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.close {
+  background: transparent;
+  border: none;
+  color: var(--muted);
+  font-size: 20px;
+}
+
+.list {
+  display: grid;
+  gap: 8px;
+}
+
+.list a {
+  display: block;
+  padding: 10px 8px;
+  border-radius: 8px;
+  background: var(--card);
+}

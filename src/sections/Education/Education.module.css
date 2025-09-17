@@ -1,0 +1,21 @@
+.list {
+  display: grid;
+  gap: 14px;
+}
+
+.item {
+  background: var(--card);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 16px;
+}
+
+.meta {
+  display: flex;
+  gap: 10px;
+  color: var(--muted);
+}
+
+.period {
+  margin-left: auto;
+}

@@ -1,0 +1,54 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: color-mix(in oklab, var(--bg) 85%, transparent);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.22), 0 2px 2px rgba(0, 0, 0, 0.34),
+    0 4px 4px rgba(0, 0, 0, 0.28), 0 8px 8px rgba(0, 0, 0, 0.22);
+}
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+}
+
+.logo {
+  width: 30px;
+  height: 30px;
+  color: var(--brand);
+  rotate: 360deg;
+}
+
+.navDesktop {
+  display: none;
+  gap: 22px;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+@media (min-width: 960px) {
+  .navDesktop {
+    display: flex;
+  }
+}
+
+.scrolled {
+  border-bottom-color: rgba(255, 255, 255, 0.12);
+}
+
+.navDesktop a {
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.navDesktop a:hover {
+  color: var(--text);
+}

@@ -1,0 +1,40 @@
+.hero {
+  display: grid;
+  gap: 20px;
+  align-items: center;
+}
+
+.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 1px solid var(--brand);
+  object-fit: cover;
+}
+
+.texts {
+  display: grid;
+  gap: 10px;
+}
+
+.title {
+  font-size: clamp(28px, 6.5vw, 46px);
+  margin: 0;
+}
+
+.subtitle {
+  color: var(--muted);
+  margin: 0;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+@media (min-width: 900px) {
+  .hero {
+    grid-template-columns: 140px 1fr;
+  }
+}

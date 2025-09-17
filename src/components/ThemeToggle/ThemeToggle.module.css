@@ -1,0 +1,8 @@
+.toggle {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: var(--card);
+  color: var(--text);
+  height: 40px;
+  width: 40px;
+  border-radius: 10px;
+}

@@ -1,0 +1,44 @@
+.list {
+  display: grid;
+  gap: 14px;
+}
+
+.item {
+  background: var(--card);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 16px;
+}
+
+.head {
+  display: grid;
+  gap: 4px;
+  align-items: baseline;
+  grid-template-columns: 1fr;
+}
+
+.company {
+  color: var(--muted);
+}
+
+.period {
+  justify-self: start;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.points {
+  margin: 8px 0 0;
+  padding-left: 18px;
+  list-style: disc;
+}
+
+@media (min-width: 700px) {
+  .head {
+    grid-template-columns: 1fr auto;
+  }
+
+  .period {
+    justify-self: end;
+  }
+}

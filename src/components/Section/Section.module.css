@@ -1,0 +1,18 @@
+.section {
+  padding: 56px 0;
+}
+
+.title {
+  font-size: clamp(26px, 6vw, 40px);
+  margin: 0 0 10px;
+}
+
+.lead {
+  color: var(--muted);
+  margin: 0 0 24px;
+}
+
+.body {
+  display: grid;
+  gap: 16px;
+}

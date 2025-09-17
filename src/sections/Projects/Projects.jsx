@@ -9,20 +9,26 @@ const DATA = [
   {
     title: "Hotel Website",
     desc: "React + Vite, i18n, gallery, booking.",
-    link: "https://example.com",
-    github: "https://github.com/you/hotel",
+    link: "https://slavutych-zakarpattia.com.ua/",
+    github: "https://github.com/Mrszlv/slavutych-hotel-site",
   },
   {
-    title: "Dropshipping Store",
-    desc: "React, LiqPay integration.",
-    link: "https://example.com",
-    github: "https://github.com/you/shop",
+    title: "Super Match",
+    desc: "HTML5, CSS3, JS + Vite",
+    link: "https://effortless-sable-63651b.netlify.app/",
+    github: "https://github.com/NikitinIhor/Super-Match",
   },
   {
     title: "Portfolio",
-    desc: "Minimalist portfolio with dark theme.",
-    link: "https://example.com",
-    github: "https://github.com/you/portfolio",
+    desc: "HTML5, CSS3, JavaScript, accordion-js, axios, izitoast, swiper",
+    link: "https://olhazhynkina.github.io/speed-js-team-project/",
+    github: "https://github.com/OlhaZhynkina/speed-js-team-project",
+  },
+  {
+    title: "Contacts Book",
+    desc: "HTML5, CSS3(module), React, Redux toolkit, Axios, Formik, Yup, mocapi.io",
+    link: "https://goit-react-hw-08-three-ivory-15.vercel.app/",
+    github: "https://github.com/Mrszlv/goit-react-hw-08",
   },
 ];
 

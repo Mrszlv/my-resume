@@ -18,6 +18,7 @@ textarea {
   border: 1px solid rgba(255, 255, 255, 0.12);
   background: var(--card);
   color: var(--text);
+  resize: none;
 }
 
 .colFull {
@@ -38,7 +39,16 @@ textarea {
   margin-top: 8px;
 }
 
-@media (min-width: 720px) {
+.link {
+  transition: transform 0.3s ease, opacity 0.3s ease, color 0.3s ease;
+}
+
+.link:hover {
+  transform: translateY(-1px);
+  color: var(--brand);
+}
+
+@media (min-width: 960px) {
   .form {
     grid-template-columns: 1fr 1fr;
   }

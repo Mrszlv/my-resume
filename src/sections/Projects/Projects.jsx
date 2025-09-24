@@ -8,7 +8,7 @@ import s from "./Projects.module.css";
 const DATA = [
   {
     title: "Hotel Website",
-    desc: "React + Vite, i18n, gallery, booking.",
+    desc: "React + Vite, i18n, izitoast, emailJS, AOS, clsx, swiper, react-hook-form, react-icons, modern-normalize",
     link: "https://slavutych-zakarpattia.com.ua/",
     github: "https://github.com/Mrszlv/slavutych-hotel-site",
   },
@@ -29,6 +29,18 @@ const DATA = [
     desc: "HTML5, CSS3(module), React, Redux toolkit, Axios, Formik, Yup, mocapi.io",
     link: "https://goit-react-hw-08-three-ivory-15.vercel.app/",
     github: "https://github.com/Mrszlv/goit-react-hw-08",
+  },
+  {
+    title: "Aquatrack",
+    desc: "CSS3(module), React, Redux toolkit, Node.js, Axios, Formik, Yup, mocapi.io",
+    link: "https://aqua-dev-amber.vercel.app/",
+    github: "https://github.com/DimaOstapchuk91/AquaDev",
+  },
+  {
+    title: "Search movies servis",
+    desc: "HTML5, CSS3(module), React, Axios, Formik, Clsx, TMDB service",
+    link: "https://goit-react-hw-05-silk-three.vercel.app/",
+    github: "https://github.com/Mrszlv/goit-react-hw-05",
   },
 ];
 

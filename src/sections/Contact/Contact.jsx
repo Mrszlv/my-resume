@@ -1,26 +1,67 @@
-import Section from "../../components/Section/Section";
-import s from "./Contact.module.css";
-import Button from "../../components/Button/Button";
+import { useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
-import { useState } from "react";
 
-export default function Contact() {
+import { useForm, ValidationError } from "@formspree/react";
+
+import iziToast from "izitoast";
+import "izitoast/dist/css/iziToast.min.css";
+
+import Section from "../../components/Section/Section";
+import Button from "../../components/Button/Button";
+
+import s from "./Contact.module.css";
+
+const FORM_ID = "xkgqwkgw";
+
+const Contact = () => {
   const { t } = useTranslation();
-  const [status, setStatus] = useState("idle");
-  const onSubmit = (e) => {
-    e.preventDefault();
-    // Тут можна підключити EmailJS або свій бекенд
-    setStatus("success");
-    e.target.reset();
-    setTimeout(() => setStatus("idle"), 3000);
-  };
+
+  const [state, handleSubmit] = useForm(FORM_ID);
+
+  const formRef = useRef(null);
+
+  useEffect(() => {
+    if (state.succeeded) {
+      iziToast.success({
+        title: t("contact.iziTitle"),
+        message: t("contact.success"),
+        position: "topCenter",
+        timeout: 3500,
+        progressBar: true,
+      });
+      formRef.current?.reset();
+    }
+  }, [state.succeeded, t]);
+
+  useEffect(() => {
+    if (state.errors && state.errors.length > 0) {
+      iziToast.error({
+        title: t("contact.iziError"),
+        message: t("contact.error"),
+        position: "topCenter",
+        timeout: 4000,
+        progressBar: true,
+      });
+    }
+  }, [state.errors, t]);
+
   return (
     <Section id="contact" title={t("contact.title")} lead={t("contact.lead")}>
-      <form className={s.form} onSubmit={onSubmit}>
+      <form ref={formRef} className={s.form} onSubmit={handleSubmit} noValidate>
+        {/*honeypot antispam */}
+        <input
+          type="text"
+          name="_gotcha"
+          style={{ display: "none" }}
+          tabIndex="-1"
+          autoComplete="off"
+        />
+
         <label>
           {t("contact.name")}
           <input name="name" required placeholder="John Doe" />
         </label>
+
         <label>
           {t("contact.email")}
           <input
@@ -30,6 +71,7 @@ export default function Contact() {
             placeholder="john@mail.com"
           />
         </label>
+
         <label className={s.colFull}>
           {t("contact.message")}
           <textarea
@@ -39,23 +81,57 @@ export default function Contact() {
             placeholder="Hi! Let's work together."
           />
         </label>
-        <Button as="button" type="submit">
-          {t("contact.send")}
+
+        <ValidationError prefix="Email" field="email" errors={state.errors} />
+        <ValidationError
+          prefix="Message"
+          field="message"
+          errors={state.errors}
+        />
+
+        <Button as="button" type="submit" disabled={state.submitting}>
+          {state.submitting ? t("contact.sended") : t("contact.send")}
         </Button>
-        {status === "success" && <span className={s.ok}>✓ Sent</span>}
       </form>
+
       <div className={s.links}>
-        <a href="mailto:you@mail.com">you@mail.com</a>
-        <a href="https://t.me/yourhandle" target="_blank" rel="noreferrer">
+        <a className={s.link} href="mailto:miroszlav.popovics@gmail.com">
+          Email
+        </a>
+
+        <a className={s.link} href="tel:+380999111006">
+          Phone
+        </a>
+
+        <a
+          className={s.link}
+          href="https://t.me/@miroszlavpopovics"
+          target="_blank"
+          rel="noreferrer"
+        >
           Telegram
         </a>
-        <a href="https://github.com/your" target="_blank" rel="noreferrer">
+
+        <a
+          className={s.link}
+          href="https://github.com/Mrszlv?tab=repositories"
+          target="_blank"
+          rel="noreferrer"
+        >
           GitHub
         </a>
-        <a href="https://linkedin.com/in/your" target="_blank" rel="noreferrer">
+
+        <a
+          className={s.link}
+          href="https://linkedin.com/in/miroslav-popovich"
+          target="_blank"
+          rel="noreferrer"
+        >
           LinkedIn
         </a>
       </div>
     </Section>
   );
-}
+};
+
+export default Contact;

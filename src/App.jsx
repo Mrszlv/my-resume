@@ -10,7 +10,7 @@ import Hero from "./sections/Hero/Hero";
 import About from "./sections/About/About";
 import Skills from "./sections/Skills/Skills";
 import Projects from "./sections/Projects/Projects";
-import Experience from "./sections/Experience/Experience";
+// import Experience from "./sections/Experience/Experience";
 import Education from "./sections/Education/Education";
 import Contact from "./sections/Contact/Contact";
 import Footer from "./components/Footer/Footer";
@@ -25,16 +25,19 @@ function App() {
   return (
     <div className={s.wrapper}>
       <Header />
+
       <main className={s.main}>
         <Hero />
         <About />
         <Skills />
         <Projects />
-        <Experience />
+        {/* <Experience /> */}
         <Education />
         <Contact />
       </main>
+
       <Footer />
+
       <ScrollTop />
     </div>
   );

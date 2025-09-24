@@ -33,7 +33,7 @@
   flex-wrap: wrap;
 }
 
-@media (min-width: 900px) {
+@media (min-width: 960px) {
   .hero {
     grid-template-columns: 140px 1fr;
   }

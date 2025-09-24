@@ -16,6 +16,16 @@
   color: var(--muted);
 }
 
+.btn {
+  width: 100%;
+}
+
 .period {
   margin-left: auto;
+}
+
+@media screen and (min-width: 960px) {
+  .btn {
+    width: 50%;
+  }
 }

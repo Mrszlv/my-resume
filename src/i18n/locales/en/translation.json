@@ -10,27 +10,53 @@
     "education": "Education",
     "contact": "Contact"
   },
+
   "hero": {
     "title": "Hi! I'm Miroszlav Popovics",
     "subtitle": "Frontend Developer (React)",
     "cta": "Download CV",
     "contact": "Contact me"
   },
+
   "about": {
     "title": "About",
     "lead": "A brief about my background and goals.",
     "text": "I focus on HTML5, CSS3, JS, React, Vite, CSS Modules, i18n, Git, Vercel and responsive design. I am studying now Shopify (Liquid)."
   },
-  "skills": { "title": "Skills", "lead": "Technologies and tools." },
+
+  "skills": {
+    "title": "Skills",
+    "lead": "Technologies and tools."
+  },
+
   "projects": { "title": "Projects", "lead": "Selected recent work." },
-  "experience": { "title": "Experience", "lead": "Companies and roles." },
-  "education": { "title": "Education", "lead": "Universities, courses." },
+
+  "experience": {
+    "title": "Experience",
+    "lead": "Companies and roles."
+  },
+
+  "education": {
+    "title": "Education",
+    "lead": "Universities, courses.",
+    "universities": " Danylo Halytsky Lviv National Medical University",
+    "faculty": "Dentistry",
+    "place": "GoIT IT School",
+    "program": "Fullstack Developer",
+    "certificate": "Download Certificate"
+  },
+
   "contact": {
     "title": "Contact",
     "lead": "Open to collaboration.",
     "name": "Name",
     "email": "Email",
     "message": "Message",
-    "send": "Send"
+    "send": "Send",
+    "sended": "Sended",
+    "iziTitle": "Success!",
+    "success": "Your message has been sent.",
+    "iziError": "Error!",
+    "error": " Something went wrong. Please try again."
   }
 }

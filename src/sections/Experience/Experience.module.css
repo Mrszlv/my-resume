@@ -33,7 +33,7 @@
   list-style: disc;
 }
 
-@media (min-width: 700px) {
+@media (min-width: 960px) {
   .head {
     grid-template-columns: 1fr auto;
   }

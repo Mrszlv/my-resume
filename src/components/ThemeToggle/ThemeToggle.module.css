@@ -5,4 +5,8 @@
   height: 40px;
   width: 40px;
   border-radius: 10px;
+
+  &:hover {
+    transform: translateY(-1px);
+  }
 }

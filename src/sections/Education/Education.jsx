@@ -1,20 +1,26 @@
 import Section from "../../components/Section/Section";
+import Button from "../../components/Button/Button";
 
 import { useTranslation } from "react-i18next";
 
 import s from "./Education.module.css";
 
-const EDU = [
-  {
-    place: "National University",
-    program: "Computer Science",
-    period: "2017 — 2021",
-  },
-  { place: "Frontend Courses", program: "React, JS", period: "2022" },
-];
-
 const Education = () => {
   const { t } = useTranslation();
+
+  const EDU = [
+    {
+      place: `${t("education.universities")}`,
+      program: `${t("education.faculty")}`,
+      period: "2005 — 2011",
+    },
+
+    {
+      place: `${t("education.place")}`,
+      program: `${t("education.program")}`,
+      period: "2024 — 2025",
+    },
+  ];
 
   return (
     <Section
@@ -32,6 +38,14 @@ const Education = () => {
             </div>
           </article>
         ))}
+        <Button
+          className={s.btn}
+          as="a"
+          href="/public/certificate.pdf"
+          target="_blank"
+        >
+          {t("education.certificate")}
+        </Button>
       </div>
     </Section>
   );

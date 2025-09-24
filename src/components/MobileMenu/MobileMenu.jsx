@@ -1,6 +1,8 @@
 import { useState } from "react";
-
 import { useTranslation } from "react-i18next";
+
+import { RxHamburgerMenu } from "react-icons/rx";
+import { RiCloseLargeFill } from "react-icons/ri";
 
 import s from "./MobileMenu.module.css";
 
@@ -16,7 +18,7 @@ const MobileMenu = ({ links }) => {
         className={s.burger}
         onClick={() => setOpen(true)}
       >
-        ☰
+        <RxHamburgerMenu />
       </button>
       {open && (
         <div className={s.backdrop} onClick={() => setOpen(false)}>
@@ -28,7 +30,7 @@ const MobileMenu = ({ links }) => {
             <div className={s.sheetHeader}>
               <strong>Menu</strong>
               <button className={s.close} onClick={() => setOpen(false)}>
-                ✕
+                <RiCloseLargeFill />
               </button>
             </div>
             <ul className={s.list}>

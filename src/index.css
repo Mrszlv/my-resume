@@ -4,6 +4,7 @@
   --muted: #b8b8b8;
   --brand: #d4af37;
   --card: #151515;
+  --header-h: 84px;
 }
 
 /* Темна/світла тема */
@@ -56,5 +57,5 @@ img {
 }
 
 section {
-  scroll-margin-top: 84px;
+  scroll-margin-top: var(--header-h);
 }

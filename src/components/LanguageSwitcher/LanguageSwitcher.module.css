@@ -1,7 +1,7 @@
 .lang {
   border: 1px solid rgba(255, 255, 255, 0.12);
   background: var(--card);
-  color: var(--text);
+  color: var(--brand);
   height: 40px;
   padding: 0 10px;
   border-radius: 10px;

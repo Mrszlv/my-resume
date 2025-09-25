@@ -60,7 +60,7 @@ const Projects = () => {
             <p className={s.desc}>{p.desc}</p>
             <div className={s.row}>
               <Button as="a" href={p.link} target="_blank" rel="noreferrer">
-                Demo
+                {t("projects.view")}
               </Button>
               <Button
                 as="a"

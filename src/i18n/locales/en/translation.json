@@ -29,7 +29,11 @@
     "lead": "Technologies and tools."
   },
 
-  "projects": { "title": "Projects", "lead": "Selected recent work." },
+  "projects": {
+    "title": "Projects",
+    "lead": "Selected recent work.",
+    "view": "Demo"
+  },
 
   "experience": {
     "title": "Experience",

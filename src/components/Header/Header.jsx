@@ -44,6 +44,10 @@ const Header = () => {
     return () => window.removeEventListener("resize", measure);
   }, []);
 
+  useEffect(() => {
+    document.documentElement.style.setProperty("--header-h", `${offset}px`);
+  }, [offset]);
+
   const ids = useMemo(() => LINKS.map((l) => l.href), []);
   const active = useScrollSpy(ids, offset);
 

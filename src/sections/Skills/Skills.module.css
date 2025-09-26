@@ -1,12 +1,60 @@
-.list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
+/* вікно прокрутки */
+.scroller {
+  --gap: 8px;
+  --speed: 28s; /* швидкість → більше = повільніше */
+  position: relative;
+  overflow: hidden;
+  -webkit-mask: linear-gradient(
+    to right,
+    transparent,
+    #000 8%,
+    #000 92%,
+    transparent
+  );
+  mask: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
 }
 
+/* рухомий трек */
+.track {
+  display: flex;
+  gap: var(--gap);
+  width: max-content;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  /* стартуємо з середини дубльованого списку */
+  transform: translateX(-50%);
+  will-change: transform;
+  animation: marquee-right var(--speed) linear infinite;
+}
+
+/* картка навички */
 .item {
+  color: var(--brand);
   padding: 10px 12px;
   border: 1px solid rgba(255, 255, 255, 0.12);
   background: var(--card);
   border-radius: 12px;
+  white-space: nowrap;
+}
+
+/* рух вправо: від -50% до 0 */
+@keyframes marquee-right {
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* опц.: пауза при наведенні */
+.scroller:hover .track {
+  animation-play-state: paused;
+}
+
+/* доступність */
+@media (prefers-reduced-motion: reduce) {
+  .track {
+    animation: none;
+    transform: none;
+  }
 }

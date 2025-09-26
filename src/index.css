@@ -1,8 +1,18 @@
+@media (prefers-reduced-motion: reduce) {
+  [data-aos] {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
+/* #d4af37 */
+
 :root {
   --bg: #0b0b0b;
   --text: #f3f3f3;
   --muted: #b8b8b8;
-  --brand: #d4af37;
+  --brand: #ff7e00;
   --card: #151515;
   --header-h: 84px;
 }
@@ -12,7 +22,7 @@
   --bg: #ffffff;
   --text: #0b0b0b;
   --muted: #555;
-  --card: #ebf6f4;
+  --card: #ff800015;
 }
 
 * {

@@ -8,7 +8,7 @@ import s from "./Header.module.css";
 import MobileMenu from "../MobileMenu/MobileMenu";
 import LanguageSwitcher from "../LanguageSwitcher/LanguageSwitcher";
 import ThemeToggle from "../ThemeToggle/ThemeToggle";
-import Logo from "../../assets/logo.svg";
+import Logo from "../../assets/logo-2.svg";
 
 const LINKS = [
   { href: "#hero", key: "nav.home" },
@@ -57,11 +57,21 @@ const Header = () => {
       className={clsx(s.header, { [s.scrolled]: scrolled })}
     >
       <div className={clsx("container", s.inner)}>
-        <a href="#hero" className={s.logo}>
+        <a
+          href="#hero"
+          className={s.logo}
+          data-aos="fade-right"
+          data-aos-delay="300"
+        >
           <img src={Logo} alt="logo" />
         </a>
 
-        <nav className={s.navDesktop} aria-label="primary">
+        <nav
+          className={s.navDesktop}
+          aria-label="primary"
+          data-aos="fade-down"
+          data-aos-delay="600"
+        >
           {LINKS.map((l) => (
             <a
               key={l.href}

@@ -16,10 +16,16 @@ textarea {
   padding: 12px 14px;
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.12);
+  border-bottom: 1px solid var(--brand);
+  outline: none;
   background: var(--card);
   color: var(--text);
   resize: none;
 }
+
+/* .contactInfo {
+  border-bottom: 1px solid var(--brand);
+} */
 
 .colFull {
   grid-column: 1 / -1;

@@ -9,11 +9,11 @@ const LanguageSwitcher = () => {
     i18n.changeLanguage(i18n.language === "uk" ? "en" : "uk");
 
   return (
-    <>
+    <div data-aos="fade-left" data-aos-delay="900">
       <button className={s.lang} onClick={toggle} aria-label="Switch language">
         {i18n.language === "uk" ? "UA" : "EN"}
       </button>
-    </>
+    </div>
   );
 };
 

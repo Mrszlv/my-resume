@@ -10,3 +10,9 @@
     transform: translateY(-1px);
   }
 }
+
+.icon {
+  color: var(--brand);
+  width: 25px;
+  height: 25px;
+}

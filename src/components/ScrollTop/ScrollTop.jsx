@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 
 import s from "./ScrollTop.module.css";
 
-import { HiArrowSmallUp } from "react-icons/hi2";
+import { BsChevronUp } from "react-icons/bs";
 
 const ScrollTop = () => {
   const [show, setShow] = useState(false);
@@ -25,7 +25,7 @@ const ScrollTop = () => {
       aria-label="Scroll to top"
     >
       {" "}
-      <HiArrowSmallUp className={s.top} />{" "}
+      <BsChevronUp className={s.top} />{" "}
     </button>
   );
 };

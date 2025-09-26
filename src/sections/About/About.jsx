@@ -8,11 +8,13 @@ const About = () => {
   const { t } = useTranslation();
 
   return (
-    <Section id="about" title={t("about.title")} lead={t("about.lead")}>
-      <div className={s.grid}>
-        <p>{t("about.text")}</p>
-      </div>
-    </Section>
+    <div data-aos="fade-up" data-aos-delay="0">
+      <Section id="about" title={t("about.title")} lead={t("about.lead")}>
+        <div className={s.grid}>
+          <p>{t("about.text")}</p>
+        </div>
+      </Section>
+    </div>
   );
 };
 

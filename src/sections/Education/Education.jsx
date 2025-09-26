@@ -23,31 +23,33 @@ const Education = () => {
   ];
 
   return (
-    <Section
-      id="education"
-      title={t("education.title")}
-      lead={t("education.lead")}
-    >
-      <div className={s.list}>
-        {EDU.map((e) => (
-          <article key={e.place} className={s.item}>
-            <h3>{e.program}</h3>
-            <div className={s.meta}>
-              <span>{e.place}</span>
-              <span className={s.period}>{e.period}</span>
-            </div>
-          </article>
-        ))}
-        <Button
-          className={s.btn}
-          as="a"
-          href="/public/certificate.pdf"
-          target="_blank"
-        >
-          {t("education.certificate")}
-        </Button>
-      </div>
-    </Section>
+    <div data-aos="fade-up" data-aos-delay="0">
+      <Section
+        id="education"
+        title={t("education.title")}
+        lead={t("education.lead")}
+      >
+        <div className={s.list}>
+          {EDU.map((e) => (
+            <article key={e.place} className={s.item}>
+              <h3>{e.program}</h3>
+              <div className={s.meta}>
+                <span>{e.place}</span>
+                <span className={s.period}>{e.period}</span>
+              </div>
+            </article>
+          ))}
+          <Button
+            className={s.btn}
+            as="a"
+            href="/public/certificate.pdf"
+            target="_blank"
+          >
+            {t("education.certificate")}
+          </Button>
+        </div>
+      </Section>
+    </div>
   );
 };
 

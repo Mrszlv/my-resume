@@ -48,34 +48,36 @@ const Projects = () => {
   const { t } = useTranslation();
 
   return (
-    <Section
-      id="projects"
-      title={t("projects.title")}
-      lead={t("projects.lead")}
-    >
-      <div className={s.grid}>
-        {DATA.map((p) => (
-          <article key={p.title} className={s.card}>
-            <h3>{p.title}</h3>
-            <p className={s.desc}>{p.desc}</p>
-            <div className={s.row}>
-              <Button as="a" href={p.link} target="_blank" rel="noreferrer">
-                {t("projects.view")}
-              </Button>
-              <Button
-                as="a"
-                variant="secondary"
-                href={p.github}
-                target="_blank"
-                rel="noreferrer"
-              >
-                GitHub
-              </Button>
-            </div>
-          </article>
-        ))}
-      </div>
-    </Section>
+    <div data-aos="fade-up" data-aos-delay="0">
+      <Section
+        id="projects"
+        title={t("projects.title")}
+        lead={t("projects.lead")}
+      >
+        <div className={s.grid}>
+          {DATA.map((p) => (
+            <article key={p.title} className={s.card}>
+              <h3>{p.title}</h3>
+              <p className={s.desc}>{p.desc}</p>
+              <div className={s.row}>
+                <Button as="a" href={p.link} target="_blank" rel="noreferrer">
+                  {t("projects.view")}
+                </Button>
+                <Button
+                  as="a"
+                  variant="secondary"
+                  href={p.github}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  GitHub
+                </Button>
+              </div>
+            </article>
+          ))}
+        </div>
+      </Section>
+    </div>
   );
 };
 

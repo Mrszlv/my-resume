@@ -48,10 +48,12 @@
   color: var(--muted);
   font-weight: 600;
   position: relative;
-  transition: color 0.15s ease;
+  transition: color 0.15s ease, transform 0.3s ease, opacity 0.3s ease;
 }
+
 .navLink:hover {
-  color: var(--text);
+  color: var(--brand);
+  transform: translateY(-1px);
 }
 
 /* активний пункт */

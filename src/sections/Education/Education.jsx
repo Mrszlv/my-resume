@@ -42,7 +42,7 @@ const Education = () => {
           <Button
             className={s.btn}
             as="a"
-            href="../../../public/certificate.pdf"
+            href="/public/certificate.pdf"
             target="_blank"
           >
             {t("education.certificate")}

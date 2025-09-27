@@ -9,6 +9,11 @@
   background: var(--card);
   color: var(--brand);
   box-shadow: var(--elevation-2);
+  transition: transform 0.15s ease;
+}
+
+.burger:active {
+  transform: scale(0.96);
 }
 
 @media (min-width: 960px) {
@@ -20,29 +25,59 @@
 .backdrop {
   position: fixed;
   inset: 0;
+  z-index: 9998;
   background: rgba(0, 0, 0, 0.5);
-  z-index: 60;
-  display: grid;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
+.backdrop.open {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .sheet {
-  /* background: var(--bg-gradient); */
-  background: var(--bg);
-
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 9999;
+  width: 70%;
+  height: auto;
+  box-sizing: border-box;
+  /* background: var(--bg); */
+  border-left: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 8px 0 0 8px;
   padding: 16px;
-  width: min(86vw, 360px);
-  margin-left: auto;
   display: flex;
   flex-direction: column;
   gap: 12px;
+  overflow: auto;
+  /* -webkit-overflow-scrolling: touch; */
+  overscroll-behavior: contain;
+
+  -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px);
+
+  /* старт трохи далі за край, щоб точно не підтікало */
+  transform: translate3d(110%, 0, 0);
+  transition: transform 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+  will-change: transform;
+  backface-visibility: hidden;
+  contain: paint layout;
+  box-shadow: var(--elevation-2);
+  padding-bottom: 80px;
+}
+
+.sheet.open {
+  transform: translate3d(0, 0, 0);
 }
 
 .sheetHeader {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 50px;
 }
 
 .strong {
@@ -60,6 +95,11 @@
   background: var(--card);
   color: var(--brand);
   box-shadow: var(--elevation-2);
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.close:hover {
+  transform: translateY(-1px);
 }
 
 .list {
@@ -72,4 +112,18 @@
   padding: 10px 8px;
   border-radius: 8px;
   background: var(--card);
+  color: var(--text);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .backdrop {
+    transition: none;
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .sheet {
+    transition: none;
+    transform: none;
+  }
 }

@@ -47,7 +47,7 @@
 
 /* базовий стиль лінків у навігації */
 .navLink {
-  color: var(--muted);
+  color: var(--text);
   font-weight: 600;
   position: relative;
   transition: color 0.15s ease, transform 0.3s ease, opacity 0.3s ease;
@@ -59,7 +59,7 @@
 }
 
 /* активний пункт */
-.navLinkActive {
+/* .navLinkActive {
   color: var(--brand);
 }
 .navLinkActive::after {
@@ -71,7 +71,7 @@
   height: 3px;
   background: var(--brand);
   border-radius: 2px;
-}
+} */
 
 .actions {
   display: flex;

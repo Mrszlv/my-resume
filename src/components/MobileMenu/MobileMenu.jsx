@@ -28,7 +28,7 @@ const MobileMenu = ({ links }) => {
             aria-label="mobile"
           >
             <div className={s.sheetHeader}>
-              <strong>Menu</strong>
+              <strong className={s.strong}>{t("modal.menu")}</strong>
               <button className={s.close} onClick={() => setOpen(false)}>
                 <RiCloseLargeFill />
               </button>

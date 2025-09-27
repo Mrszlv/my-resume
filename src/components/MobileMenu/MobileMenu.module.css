@@ -7,7 +7,8 @@
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.12);
   background: var(--card);
-  color: var(--text);
+  color: var(--brand);
+  box-shadow: var(--elevation-2);
 }
 
 @media (min-width: 960px) {
@@ -25,8 +26,10 @@
 }
 
 .sheet {
+  /* background: var(--bg-gradient); */
   background: var(--bg);
-  border-left: 1px solid rgba(255, 255, 255, 0.08);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 8px 0 0 8px;
   padding: 16px;
   width: min(86vw, 360px);
@@ -42,11 +45,21 @@
   justify-content: space-between;
 }
 
+.strong {
+  color: var(--brand);
+}
+
 .close {
-  background: transparent;
-  border: none;
-  color: var(--muted);
-  font-size: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: var(--card);
+  color: var(--brand);
+  box-shadow: var(--elevation-2);
 }
 
 .list {

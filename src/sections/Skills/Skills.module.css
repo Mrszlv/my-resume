@@ -37,6 +37,7 @@
   background: var(--card);
   border-radius: 12px;
   white-space: nowrap;
+  /* box-shadow: var(--elevation-1); */
 }
 
 /* рух вправо: від -50% до 0 */

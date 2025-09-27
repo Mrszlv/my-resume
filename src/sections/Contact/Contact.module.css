@@ -39,9 +39,9 @@ textarea {
 
 .links {
   display: flex;
-  gap: 14px;
+  gap: 24px;
   flex-wrap: wrap;
-  color: var(--muted);
+  color: var(--text);
   margin-top: 8px;
 }
 
@@ -52,6 +52,11 @@ textarea {
 .link:hover {
   transform: translateY(-1px);
   color: var(--brand);
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
 }
 
 @media (min-width: 960px) {

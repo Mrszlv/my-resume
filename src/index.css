@@ -6,23 +6,129 @@
   }
 }
 
+@keyframes bg-breathe {
+  0%,
+  100% {
+    background-size: 100% 100%, 100% 100%, 100% 100%;
+    background-position: 12% 12%, 88% 18%, 50% 100%;
+  }
+  50% {
+    /* трохи «надуваємо» і зміщуємо плями */
+    background-size: 108% 108%, 104% 104%, 106% 106%;
+    background-position: 10% 14%, 90% 16%, 50% 98%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body {
+    animation: none;
+  }
+}
+
 /* #d4af37 */
 
 :root {
+  --bg-breathe-speed: 8s;
+  --bg-breathe-ease: ease-in-out;
+
+  --bg-gradient: radial-gradient(
+      1100px 520px at 12% 12%,
+      rgba(255, 126, 0, 0.16) 0%,
+      rgba(255, 126, 0, 0) 60%
+    ),
+    radial-gradient(
+      900px 480px at 88% 18%,
+      rgba(255, 200, 0, 0.12) 0%,
+      rgba(255, 200, 0, 0) 58%
+    ),
+    radial-gradient(
+      1000px 640px at 50% 100%,
+      rgba(255, 126, 0, 0.1) 0%,
+      rgba(255, 126, 0, 0) 60%
+    );
+
   --bg: #0b0b0b;
   --text: #f3f3f3;
   --muted: #b8b8b8;
   --brand: #ff7e00;
   --card: #151515;
+
   --header-h: 84px;
+
+  --shadow-color: rgba(2, 6, 23, 0.22); /* темно-синій, ледве помітний */
+  --shadow-strong: rgba(2, 6, 23, 0.34);
+  --logo-glow: rgba(255, 126, 0, 0.35); /* #ff7e00 з альфою */
+
+  --elevation-1: 0 1px 2px var(--shadow-color), 0 2px 4px var(--shadow-color);
+  --elevation-2: 0 2px 4px var(--shadow-color), 0 6px 12px var(--shadow-strong);
+  --elevation-3: 0 6px 10px var(--shadow-strong),
+    0 12px 20px var(--shadow-strong);
 }
 
 /* Темна/світла тема */
 :root.light {
+  --bg-gradient: radial-gradient(
+      1100px 520px at 12% 12%,
+      rgba(255, 126, 0, 0.16) 0%,
+      rgba(255, 126, 0, 0) 60%
+    ),
+    radial-gradient(
+      900px 480px at 88% 18%,
+      rgba(255, 200, 0, 0.12) 0%,
+      rgba(255, 200, 0, 0) 58%
+    ),
+    radial-gradient(
+      1000px 640px at 50% 100%,
+      rgba(255, 126, 0, 0.1) 0%,
+      rgba(255, 126, 0, 0) 60%
+    );
+
   --bg: #ffffff;
   --text: #0b0b0b;
   --muted: #555;
   --card: #ff800015;
+  --mobile-item: #ff8000b5;
+  --bg-breathe-speed: 8s;
+}
+
+/* Світла тема */
+:root[data-theme="light"],
+.light {
+  --shadow-color: rgba(2, 6, 23, 0.16);
+  --shadow-strong: rgba(2, 6, 23, 0.22);
+  --logo-glow: rgba(255, 126, 0, 0.28);
+
+  --elevation-1: 0 1px 1.5px var(--shadow-color), 0 2px 3px var(--shadow-color);
+  --elevation-2: 0 2px 4px var(--shadow-color), 0 6px 10px var(--shadow-strong);
+  --elevation-3: 0 8px 12px var(--shadow-strong),
+    0 18px 28px var(--shadow-strong);
+
+  --elevation-1-top: 0 -1px 2px var(--shadow-color),
+    0 -2px 4px var(--shadow-color);
+  --elevation-2-top: 0 -2px 4px var(--shadow-color),
+    0 -6px 12px var(--shadow-strong);
+  --elevation-3-top: 0 -6px 10px var(--shadow-strong),
+    0 -12px 20px var(--shadow-strong);
+}
+
+/* Темна тема */
+:root[data-theme="dark"],
+.dark {
+  --shadow-color: rgba(36, 36, 36, 0.483);
+  --shadow-strong: rgba(78, 78, 78, 0.486);
+  --logo-glow: rgba(255, 126, 0, 0.55);
+
+  --elevation-1: 0 1px 2px var(--shadow-color), 0 2px 4px var(--shadow-color);
+  --elevation-2: 0 2px 6px var(--shadow-color), 0 10px 16px var(--shadow-strong);
+  --elevation-3: 0 8px 14px var(--shadow-strong),
+    0 20px 32px var(--shadow-strong);
+
+  --elevation-1-top: 0 -1px 2px var(--shadow-color),
+    0 -2px 4px var(--shadow-color);
+  --elevation-2-top: 0 -2px 6px var(--shadow-color),
+    0 -10px 16px var(--shadow-strong);
+  --elevation-3-top: 0 -8px 14px var(--shadow-strong),
+    0 -20px 32px var(--shadow-strong);
 }
 
 * {
@@ -37,8 +143,19 @@ body {
   margin: 0;
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu,
     "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
-  background: var(--bg);
+  background-color: var(--bg); /* колір-база для mix у хедері/футері */
+  background-image: var(--bg-gradient); /* сам градієнт */
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* приємний ефект при скролі */
+
   color: var(--text);
+
+  background-size: 100% 100%, 100% 100%, 100% 100%;
+  /* початкові позиції шарів (як у твоїй темній темі) */
+  background-position: 12% 12%, 88% 18%, 50% 100%;
+
+  /* «дихання» */
+  animation: bg-breathe var(--bg-breathe-speed) var(--bg-breathe-ease) infinite;
 }
 
 .container {

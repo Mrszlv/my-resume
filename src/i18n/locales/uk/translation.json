@@ -11,6 +11,10 @@
     "contact": "Контакти"
   },
 
+  "modal": {
+    "menu": "Меню"
+  },
+
   "hero": {
     "title": "Привіт! Я Мирослав Попович",
     "subtitle": "Frontend Developer (React)",

@@ -1,14 +1,35 @@
 .footer {
-  padding: 20px;
+  padding: 24px 0;
+
+  /* як у хедера: напівпрозорий фон + блюр */
+  background: var(--bg);
   background: color-mix(in oklab, var(--bg) 85%, transparent);
   -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
   border-top: 1px solid rgba(255, 255, 255, 0.06);
-  box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.22), 0 -2px 2px rgba(0, 0, 0, 0.34),
-    0 -4px 4px rgba(0, 0, 0, 0.28), 0 -8px 8px rgba(0, 0, 0, 0.22);
+  /* тінь ВГОРУ */
+  box-shadow: var(--elevation-3-top);
+
+  color: var(--text);
+}
+
+.logo {
+  display: inline-flex;
+  width: 50px;
+  height: 50px;
 }
 
 .footerInner {
   display: flex;
-  gap: 32px;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+@media screen and (min-width: 768px) {
+  .footerInner {
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+  }
 }

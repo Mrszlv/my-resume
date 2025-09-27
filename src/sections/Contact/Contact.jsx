@@ -9,6 +9,12 @@ import "izitoast/dist/css/iziToast.min.css";
 import Section from "../../components/Section/Section";
 import Button from "../../components/Button/Button";
 
+import { MdOutlineAlternateEmail } from "react-icons/md";
+import { MdLocalPhone } from "react-icons/md";
+import { FaTelegramPlane } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa6";
+import { FaLinkedinIn } from "react-icons/fa6";
+
 import s from "./Contact.module.css";
 
 const FORM_ID = "xkgqwkgw";
@@ -109,11 +115,11 @@ const Contact = () => {
 
         <div className={s.links} data-aos="fade-right" data-aos-delay="300">
           <a className={s.link} href="mailto:miroszlav.popovics@gmail.com">
-            Email
+            <MdOutlineAlternateEmail className={s.icon} />
           </a>
 
           <a className={s.link} href="tel:+380999111006">
-            Phone
+            <MdLocalPhone className={s.icon} />
           </a>
 
           <a
@@ -122,7 +128,7 @@ const Contact = () => {
             target="_blank"
             rel="noreferrer"
           >
-            Telegram
+            <FaTelegramPlane className={s.icon} />
           </a>
 
           <a
@@ -131,7 +137,7 @@ const Contact = () => {
             target="_blank"
             rel="noreferrer"
           >
-            GitHub
+            <FaGithub className={s.icon} />
           </a>
 
           <a
@@ -140,7 +146,7 @@ const Contact = () => {
             target="_blank"
             rel="noreferrer"
           >
-            LinkedIn
+            <FaLinkedinIn className={s.icon} />
           </a>
         </div>
       </Section>

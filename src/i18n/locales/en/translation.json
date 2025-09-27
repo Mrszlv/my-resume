@@ -11,6 +11,10 @@
     "contact": "Contact"
   },
 
+  "modal": {
+    "menu": "Menu"
+  },
+
   "hero": {
     "title": "Hi! I'm Miroszlav Popovics",
     "subtitle": "Frontend Developer (React)",

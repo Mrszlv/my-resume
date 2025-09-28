@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 
 import s from "./Hero.module.css";
 
-const cvHref = new URL("/docs/cv.pdf", import.meta.url);
+const cvHref = new URL("/public/docs/cv.pdf", import.meta.url);
 const base = import.meta.env.BASE_URL;
 const img = (p) => `${base}img/${p}`;
 

@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 
 import s from "./Education.module.css";
 
-const certHref = new URL("/docs/certificate.pdf", import.meta.url);
+const certHref = new URL("/public/docs/certificate.pdf", import.meta.url);
 
 const Education = () => {
   const { t } = useTranslation();

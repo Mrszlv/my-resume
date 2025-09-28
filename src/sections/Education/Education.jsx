@@ -5,6 +5,8 @@ import { useTranslation } from "react-i18next";
 
 import s from "./Education.module.css";
 
+const certHref = new URL("/public/certificate.pdf", import.meta.url);
+
 const Education = () => {
   const { t } = useTranslation();
 
@@ -42,8 +44,9 @@ const Education = () => {
           <Button
             className={s.btn}
             as="a"
-            href="/public/certificate.pdf"
+            href={certHref}
             target="_blank"
+            dowload
           >
             {t("education.certificate")}
           </Button>

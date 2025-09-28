@@ -5,6 +5,8 @@ import { useTranslation } from "react-i18next";
 
 import s from "./Hero.module.css";
 
+const cvHref = new URL("/cv.pdf", import.meta.url);
+
 const Hero = () => {
   const { t } = useTranslation();
 
@@ -29,7 +31,7 @@ const Hero = () => {
           </p>
 
           <div className={s.actions} data-aos="fade-up" data-aos-delay="400">
-            <Button as="a" href="/public/cv.pdf" target="_blank">
+            <Button as="a" href={cvHref} target="_blank">
               {t("hero.cta")}
             </Button>
 

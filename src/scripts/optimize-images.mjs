@@ -20,6 +20,9 @@ async function optimize(patterns, dest) {
   return files.length;
 }
 
-const n1 = await optimize(["public/**/*.{jpg,jpeg,png,svg}"], "public");
+const n1 = await optimize(
+  ["public/images/**/*.{jpg,jpeg,png,svg}"],
+  "public/images"
+);
 const n2 = await optimize(["src/assets/**/*.{jpg,jpeg,png,svg}"], "src/assets");
 console.log(`✅ Optimized ${n1 + n2} images`);

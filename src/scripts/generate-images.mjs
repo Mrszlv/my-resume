@@ -2,7 +2,7 @@
 import sharp from "sharp";
 import { mkdir } from "node:fs/promises";
 
-const inFile = "public/Avatar.jpg"; // звідси беремо оригінал
+const inFile = "public/images/Avatar.jpg"; // звідси беремо оригінал
 const outDir = "public/img"; // сюди кладемо деривативи
 const sizes = [128, 256, 512]; // ширини (підійдуть і 96/160, але із запасом)
 

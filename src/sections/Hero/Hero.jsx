@@ -19,6 +19,7 @@ const Hero = () => {
           className={s.avatar}
           data-aos="zoom-in"
           data-aos-delay="500"
+          fetchPriority="high"
         />
 
         <div className={s.texts}>

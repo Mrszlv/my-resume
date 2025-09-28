@@ -9,7 +9,7 @@ import "izitoast/dist/css/iziToast.min.css";
 import Section from "../../components/Section/Section";
 import Button from "../../components/Button/Button";
 
-import { MdOutlineAlternateEmail } from "react-icons/md";
+import { TfiEmail } from "react-icons/tfi";
 import { MdLocalPhone } from "react-icons/md";
 import { FaTelegramPlane } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa6";
@@ -114,11 +114,15 @@ const Contact = () => {
         </form>
 
         <div className={s.links} data-aos="fade-right" data-aos-delay="300">
-          <a className={s.link} href="mailto:miroszlav.popovics@gmail.com">
-            <MdOutlineAlternateEmail className={s.icon} />
+          <a
+            className={s.link}
+            href="mailto:miroszlav.popovics@gmail.com"
+            aria-label="Email me"
+          >
+            <TfiEmail className={s.icon} />
           </a>
 
-          <a className={s.link} href="tel:+380999111006">
+          <a className={s.link} href="tel:+380999111006" aria-label="Call me">
             <MdLocalPhone className={s.icon} />
           </a>
 
@@ -127,6 +131,7 @@ const Contact = () => {
             href="https://t.me/@miroszlavpopovics"
             target="_blank"
             rel="noreferrer"
+            aria-label="Message me on Telegram"
           >
             <FaTelegramPlane className={s.icon} />
           </a>
@@ -136,6 +141,7 @@ const Contact = () => {
             href="https://github.com/Mrszlv?tab=repositories"
             target="_blank"
             rel="noreferrer"
+            aria-label="My GitHub profile"
           >
             <FaGithub className={s.icon} />
           </a>
@@ -145,6 +151,7 @@ const Contact = () => {
             href="https://linkedin.com/in/miroslav-popovich"
             target="_blank"
             rel="noreferrer"
+            aria-label="My LinkedIn profile"
           >
             <FaLinkedinIn className={s.icon} />
           </a>

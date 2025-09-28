@@ -6,6 +6,8 @@ import { useTranslation } from "react-i18next";
 import s from "./Hero.module.css";
 
 const cvHref = new URL("/cv.pdf", import.meta.url);
+const base = import.meta.env.BASE_URL;
+const img = (p) => `${base}img/${p}`;
 
 const Hero = () => {
   const { t } = useTranslation();
@@ -13,14 +15,45 @@ const Hero = () => {
   return (
     <Section id="hero">
       <div className={s.hero}>
-        <img
-          src="/Avatar.jpg"
-          alt="Avatar"
-          className={s.avatar}
-          data-aos="zoom-in"
-          data-aos-delay="500"
-          fetchPriority="high"
-        />
+        <picture>
+          {/* AVIF першочергово */}
+          <source
+            type="image/avif"
+            srcSet={[
+              `${img("avatar-128.avif")} 128w`,
+              `${img("avatar-256.avif")} 256w`,
+              `${img("avatar-512.avif")} 512w`,
+            ].join(", ")}
+            sizes="(min-width: 960px) 160px, 118px"
+          />
+          {/* WEBP як фолбек 1 */}
+          <source
+            type="image/webp"
+            srcSet={[
+              `${img("avatar-128.webp")} 128w`,
+              `${img("avatar-256.webp")} 256w`,
+              `${img("avatar-512.webp")} 512w`,
+            ].join(", ")}
+            sizes="(min-width: 960px) 160px, 118px"
+          />
+          {/* JPG як фолбек 2 */}
+          <img
+            src={img("avatar-256.jpg")}
+            srcSet={[
+              `${img("avatar-128.jpg")} 128w`,
+              `${img("avatar-256.jpg")} 256w`,
+              `${img("avatar-512.jpg")} 512w`,
+            ].join(", ")}
+            sizes="(min-width: 960px) 160px, 118px"
+            width="118"
+            height="157" // допомагає CLS
+            alt="My portrait"
+            className={s.avatar}
+            decoding="async"
+            fetchpriority="high" // це LCP → хай вантажиться пріоритетно
+            loading="eager"
+          />
+        </picture>
 
         <div className={s.texts}>
           <h1 className={s.title} data-aos="fade-left" data-aos-delay="300">

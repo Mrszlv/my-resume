@@ -31,7 +31,7 @@ const Hero = () => {
           </p>
 
           <div className={s.actions} data-aos="fade-up" data-aos-delay="400">
-            <Button as="a" href={cvHref} target="_blank" dowload>
+            <Button as="a" href={cvHref} target="_blank" dowload="true">
               {t("hero.cta")}
             </Button>
 

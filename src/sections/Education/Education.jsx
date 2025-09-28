@@ -46,7 +46,7 @@ const Education = () => {
             as="a"
             href={certHref}
             target="_blank"
-            dowload
+            dowload="true"
           >
             {t("education.certificate")}
           </Button>

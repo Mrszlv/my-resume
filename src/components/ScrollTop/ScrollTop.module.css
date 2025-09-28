@@ -9,7 +9,7 @@
   height: 40px;
   border-radius: 50%;
   border: 1px solid var(--brand);
-  background: transparent;
+  background: var(--card);
   z-index: 70;
   transition: transform 0.3s ease, opacity 0.3s ease;
   box-shadow: var(--elevation-2);

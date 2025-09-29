@@ -26,10 +26,23 @@
   gap: 16px;
 }
 
+.geo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.icon {
+  color: var(--brand);
+  width: 20px;
+  height: 20px;
+}
+
 @media screen and (min-width: 768px) {
   .footerInner {
     flex-direction: row;
     align-items: center;
     justify-content: start;
+    gap: 32px;
   }
 }

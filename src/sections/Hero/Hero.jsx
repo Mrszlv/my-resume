@@ -50,7 +50,7 @@ const Hero = () => {
             alt="My portrait"
             className={s.avatar}
             decoding="async"
-            fetchpriority="high" // це LCP → хай вантажиться пріоритетно
+            fetchPriority="high" // це LCP → хай вантажиться пріоритетно
             loading="eager"
           />
         </picture>

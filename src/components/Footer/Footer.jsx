@@ -1,5 +1,7 @@
 import Logo from "../../assets/logo-2.svg";
 
+import { PiMapPinAreaLight } from "react-icons/pi";
+
 import s from "./Footer.module.css";
 
 const Footer = () => {
@@ -11,7 +13,8 @@ const Footer = () => {
           © {new Date().getFullYear()} Miroszlav Popovics
         </div>
         <div className={s.geo}>
-          📍 <span id="geo">Ukraine, Uzhhorod</span>
+          <PiMapPinAreaLight className={s.icon} />{" "}
+          <span id="geo">Ukraine, Uzhhorod</span>
         </div>
       </div>
     </footer>

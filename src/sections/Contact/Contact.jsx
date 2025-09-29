@@ -54,6 +54,7 @@ const Contact = () => {
   return (
     <div data-aos="fade-up" data-aos-delay="0">
       <Section id="contact" title={t("contact.title")} lead={t("contact.lead")}>
+        <strong className={s.strong}>{t("contact.form")}</strong>
         <form
           ref={formRef}
           className={s.form}

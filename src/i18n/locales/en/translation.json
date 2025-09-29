@@ -57,8 +57,9 @@
   "contact": {
     "title": "Contact",
     "lead": "Open to collaboration.",
-    "name": "Name",
-    "email": "Email",
+    "form": "Feedback form",
+    "name": "Your name",
+    "email": "Your mail",
     "message": "Message",
     "send": "Send",
     "sended": "Sended",
@@ -66,5 +67,10 @@
     "success": "Your message has been sent.",
     "iziError": "Error!",
     "error": " Something went wrong. Please try again."
+  },
+
+  "footer": {
+    "text": "Miroszlav Popovics",
+    "geo": "Ukraine, Uzhhorod"
   }
 }

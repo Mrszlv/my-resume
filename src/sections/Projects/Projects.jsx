@@ -42,6 +42,13 @@ const DATA = [
     link: "https://goit-react-hw-05-silk-three.vercel.app/",
     github: "https://github.com/Mrszlv/goit-react-hw-05",
   },
+  {
+    title: "Project: 3D room",
+    desc: "React 18 + Vite, @react-three/fiber, @react-three/drei, GSAP + ScrollTrigger, Postprocessing, GLTF Models",
+    link: "https://bright-clafoutis-16a458.netlify.app",
+    github:
+      "https://github.com/obox-systems/test_task_frontend_interactive_dev_myroslav_popovych",
+  },
 ];
 
 const Projects = () => {

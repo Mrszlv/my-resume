@@ -49,6 +49,12 @@ const DATA = [
     github:
       "https://github.com/obox-systems/test_task_frontend_interactive_dev_myroslav_popovych",
   },
+  {
+    title: "CRM Companies",
+    desc: "Next.js, React, TypeScript, TanStack React Query 5 + React Query Devtools, Headless UI, Formik, MockAPI.io, Tailwind CSS 3 (+ PostCSS, Autoprefixer), clsx",
+    link: "https://crm-companies-ten.vercel.app/",
+    github: "https://github.com/Mrszlv/crm-companies",
+  },
 ];
 
 const Projects = () => {

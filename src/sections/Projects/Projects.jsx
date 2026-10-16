@@ -9,7 +9,7 @@ const DATA = [
   {
     title: "Hotel Website",
     desc: "React + Vite, i18n, izitoast, emailJS, AOS, clsx, swiper, react-hook-form, react-icons, modern-normalize",
-    link: "https://slavutych-zakarpattia.com.ua/",
+    link: "https://6a2acc0557815e0008158f23--slavutych.netlify.app/",
     github: "https://github.com/Mrszlv/slavutych-hotel-site",
   },
   {
